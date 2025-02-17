@@ -16,7 +16,7 @@ class myButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
                       style: ButtonStyle( 
-                        backgroundColor: WidgetStatePropertyAll( 
+                        backgroundColor:const WidgetStatePropertyAll( 
                            Colors.black87
                         ),
                         minimumSize: WidgetStatePropertyAll( 
@@ -31,7 +31,7 @@ class myButton extends StatelessWidget {
                      
                      
                       onPressed:onTap,
-                       child:isLoading?CircularProgressIndicator(): Center(child: Text(title,style: TextStyle(fontSize: 15.sp,fontWeight:FontWeight.w500,color:Colors.white),))
+                       child:isLoading?const CircularProgressIndicator(): Center(child: Text(title,style: TextStyle(fontSize: 15.sp,fontWeight:FontWeight.w500,color:Colors.white),))
                       );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_login_signup/View/firestore_post_screen.dart';
 import 'package:firebase_login_signup/Widgets/button.dart';
-import 'package:firebase_login_signup/View/post_screen.dart';
 import 'package:firebase_login_signup/Widgets/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +21,7 @@ class _VerifyCodeState extends State<VerifyCode> {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar( 
-        title:Text("Verify"),
+        title:const Text("Verify"),
         centerTitle: true,
       ),
       body: Column(  
@@ -31,7 +31,7 @@ class _VerifyCodeState extends State<VerifyCode> {
             padding: const EdgeInsets.all(12.0),
             child: TextFormField( 
              controller: verifyCodeC,
-              decoration: InputDecoration( 
+              decoration:const InputDecoration( 
                 hintText: "6 Digit Code",
                 border: OutlineInputBorder( 
                   
@@ -56,7 +56,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                   isLoading=false;
                 });
                     await auth.signInWithCredential(credentials);
-                    Navigator.push(context, MaterialPageRoute(builder:(context) => PostScreen(),));
+                    Navigator.push(context, MaterialPageRoute(builder:(context) =>const FirestorePostScreen(),));
                   }catch(e){
                     setState(() {
                   isLoading=false;
