@@ -146,13 +146,13 @@ class _FirestorePostScreenState extends State<FirestorePostScreen> {
                                     fontSize: 16.sp,
                                   ),
                                 ),
-                                subtitle: Text(
-                                  doc['id'],
-                                  style: TextStyle(
-                                    color: Colors.white60,
-                                    fontSize: 12.sp,
-                                  ),
-                                ),
+                                // subtitle: Text(
+                                //   doc['id'],
+                                //   style: TextStyle(
+                                //     color: Colors.white60,
+                                //     fontSize: 12.sp,
+                                //   ),
+                                // ),
                                 trailing: PopupMenuButton(
                                   icon:const Icon(Icons.more_vert, color: Colors.white),
                                   color:const Color(0xFF2C3E50),
